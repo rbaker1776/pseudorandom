@@ -11,7 +11,7 @@ files = [
 	"./generators/matlab_randi/chi_square_results.txt",
 	"./generators/xorshift64/chi_square_results.txt",
 	"./generators/xorshift64_star/chi_square_results.txt",
-	"./generators/atmospheric_noise/chi_square_results.txt",
+	"./generators/pi_digits/chi_square_results.txt",
 ]
 
 

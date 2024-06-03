@@ -127,7 +127,7 @@ int main()
 		//"./generators/matlab_randi/randomness.txt",
 		//"./generators/xorshift64/randomness.txt",
 		//"./generators/xorshift64_star/randomness.txt",
-		"./generators/atmospheric_noise/randomness.txt",
+		"./generators/pi_digits/randomness.txt",
 	};
 	const std::vector<std::string> outfiles = 
 	{
@@ -140,7 +140,7 @@ int main()
 		//"./generators/matlab_randi/chi_square_results.txt",
 		//"./generators/xorshift64/chi_square_results.txt",
 		//"./generators/xorshift64_star/chi_square_results.txt",
-		"./generators/atmospheric_noise/chi_square_results.txt",
+		"./generators/pi_digits/chi_square_results.txt",
 	};
 
 	for (int i = 0; i < infiles.size(); ++i)
@@ -167,7 +167,7 @@ int main()
 				  << double(duration.count()) / 1000.0 << " seconds" << std::endl << std::endl;
 	}
 
-	read_file_into_array("./generators/atmospheric_noise/randomness.txt");
+	read_file_into_array("./generators/pi_digits/randomness.txt");
 	std::cout << substring_distribution(1) << std::endl;
 
 	return 0;
