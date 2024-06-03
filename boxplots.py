@@ -10,7 +10,10 @@ files = [
 	"./generators/python_numpy_random/chi_square_results.txt",
 	"./generators/java_math_random/chi_square_results.txt",
 	"./generators/java_util_random/chi_square_results.txt",
+	"./generators/matlab_randi/chi_square_results.txt",
 	"./generators/xorshift64/chi_square_results.txt",
+	"./generators/xorshift64_star/chi_square_results.txt",
+	"./generators/atmospheric_noise/chi_square_results.txt",
 ]
 
 generators = [
@@ -20,7 +23,10 @@ generators = [
 	"Numpy random",
 	"Java Math.Random",
 	"Java Util.Random",
+	"MATLAB randi",
 	"Xorshift 64",
+	"Xorshift* 64",
+	"Atmosphere",
 ]
 
 p_values = {generator: [] for generator in generators}

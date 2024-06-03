@@ -15,7 +15,7 @@ using std::chrono::duration_cast;
 using std::chrono::milliseconds;
 
 
-// Writes the outstram operator for a vector
+// Writes the outstream operator for a vector
 // Useful for debugging and printing vectors
 template<typename T>
 std::ostream& operator<<(std::ostream& os, const std::vector<T>& v)
@@ -124,7 +124,10 @@ int main()
 		//"./generators/python_numpy_random/randomness.txt",
 		//"./generators/java_math_random/randomness.txt",
 		//"./generators/java_util_random/randomness.txt",
-		"./generators/xorshift64/randomness.txt",
+		//"./generators/matlab_randi/randomness.txt",
+		//"./generators/xorshift64/randomness.txt",
+		//"./generators/xorshift64_star/randomness.txt",
+		"./generators/atmospheric_noise/randomness.txt",
 	};
 	const std::vector<std::string> outfiles = 
 	{
@@ -134,7 +137,10 @@ int main()
 		//"./generators/python_numpy_random/chi_square_results.txt",
 		//"./generators/java_math_random/chi_square_results.txt",
 		//"./generators/java_util_random/chi_square_results.txt",
-		"./generators/xorshift64/chi_square_results.txt",
+		//"./generators/matlab_randi/chi_square_results.txt",
+		//"./generators/xorshift64/chi_square_results.txt",
+		//"./generators/xorshift64_star/chi_square_results.txt",
+		"./generators/atmospheric_noise/chi_square_results.txt",
 	};
 
 	for (int i = 0; i < infiles.size(); ++i)
@@ -160,6 +166,9 @@ int main()
 		std::cout << "Completed chi-square analysis of " << infiles[i] << " in " 
 				  << double(duration.count()) / 1000.0 << " seconds" << std::endl << std::endl;
 	}
+
+	read_file_into_array("./generators/atmospheric_noise/randomness.txt");
+	std::cout << substring_distribution(1) << std::endl;
 
 	return 0;
 }
